@@ -37,3 +37,32 @@
 * **Control over Cycles:** LangGraph allows the agent to "loop back" and retry if a task fails.
 * **State Management:** It keeps track of the data history throughout the process.
 * **Human-in-the-loop:** It allows a human analyst to review and "approve" the work at critical steps.
+
+
+  ---
+
+## Assignment 2: Building an Agentic AI System
+
+### 🎯 Task Overview
+Create a research agent that refines a user query, searches the web, and reads the top 3 ranking sites to provide a comprehensive and grounded answer.
+
+### 🛠️ Tools & Frameworks
+* **Search Tool:** `TavilySearchResults` (to find the top 3 links).
+* **Scraping Tool:** Custom `fetch_url` tool (to read raw text from the retrieved URLs).
+* **LLM:** NVIDIA Nemotron-3-nano-30b (via OpenRouter).
+* **Orchestration:** LangChain & LangGraph (`create_agent`).
+
+### 💻 Code Solution
+The complete Python script for this agent can be found here: [agent_solution.py](./Assignment_2/agent_solution.py)
+
+### 📈 Execution Output (Proof of Work)
+**User Query:** *"What are the latest updates in LangGraph in 2025?"*
+
+**Agent Response:**
+> **Latest LangGraph updates in 2025 (based on the search results):**
+> 
+> * **August 2025 – Prompt‑engineering UI:** View and edit node logic directly in LangGraph Studio.
+> * **May 2025 – Node‑level caching & Deferred nodes:** Cache task results to speed up execution and support running nodes only after parallel branches complete.
+> * **May 2025 – MCP & Swarm library:** Reliable connection to remote MCP servers and a lightweight library for building multi‑agent swarms.
+> * **March 2025 – "BigTool" library:** Allows agents to access a large number of tools scalably.
+> * **March 2025 – Pre‑built agents (LangGraph 0.3):** Templates for developers to control complex workflows easily.
