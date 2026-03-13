@@ -5,9 +5,9 @@
 * **Industry:** Software & Technology (Fintech / Equity Research)
 * **Use Case:** Agentic Workflows for Data Extraction and Financial Analysis.
 * **Reference:** [LangChain Case Study (2025)](https://blog.langchain.dev/how-captide-is-redefining-equity-research-with-agentic-workflows-built-on-langgraph-and-langsmith/)
-* **Student Name:** [اكتب اسمك هنا]
-* **University:** [اكتب اسم جامعتك هنا]
-* **Department / Major:** [اكتب تخصصك هنا]
+* **Student Name:** [Ahmad hassan alyami]
+* **University:** [sadia]
+* **Department / Major:** [IT]
 
 ---
 
