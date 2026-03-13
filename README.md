@@ -132,3 +132,31 @@ The complete Python script is available here: [semantic_search.py](./Assignment_
 > **Summary of Actions Taken:** > 1. Documented the outage. 
 > 2. Identified required response steps per the BCP. 
 > 3. Alerted the responsible team to initiate immediate corrective actions.
+>
+> ---
+
+## Assignment 5: RAG Agent (Multi-Step Reasoning)
+
+### 🎯 Objective
+Implement a sophisticated RAG Agent that utilizes search tools to autonomously answer complex, multi-step queries. Unlike a standard RAG chain that executes a single predefined search, this agent decides *when* and *what* to search for dynamically.
+
+### 📄 Data Source
+To fulfill the requirement of using a completely new data source, I created a custom knowledge base focusing on the **"History of Machine Learning & Neural Networks"**.
+
+### 🛠️ Agent Implementation & Capabilities
+The system is built using LangGraph's `create_agent` and equips the LLM with a specialized `retrieve_context` tool connected to an `InMemoryVectorStore`. 
+
+I tested the agent's multi-step reasoning capability by issuing a prompt that requires two distinct factual lookups:
+1. Identifying who coined the term "machine learning".
+2. Identifying who popularized "backpropagation".
+
+### 💻 Code Solution
+The complete Python script demonstrating the RAG Agent logic can be found here: [rag_agent.py](./Assignment_5/rag_agent.py)
+
+### 📈 Execution Output (Proof of Work)
+**User Query:** *"First, search to find out who coined the term 'machine learning' and in what year. Then, use a second search to find out who popularized the backpropagation algorithm later on."*
+
+**Agent Response:**
+> The term "machine learning" was coined by **Arthur Samuel in 1959** while he was at IBM.
+> 
+> Later on, the backpropagation algorithm was popularized by **David Rumelhart, Geoffrey Hinton, and Ronald Williams in 1986**.
