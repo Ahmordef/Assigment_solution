@@ -92,6 +92,34 @@ The Python script utilizing LangGraph's `create_agent` to build this supervisor 
 ### 📈 Execution Output (Supervisor Report)
 **User Incident Report:** *"There is a major power outage in the main server room. It is highly critical."*
 
+---
+
+## Assignment 4: Semantic Search (RAG Pipeline)
+
+### 🎯 Objective
+Apply the fundamental steps of Retrieval Augmented Generation (RAG): Load, Split, Embed, Store, and Retrieve, using a custom domain-specific document.
+
+### 📄 Document of Choice
+To build a cohesive portfolio, I applied this pipeline to a custom **"Risk Management and Business Continuity Policy"** document. This demonstrates how semantic search can be used to quickly retrieve critical governance protocols and role responsibilities during a crisis.
+
+### 🛠️ Pipeline Implementation
+1. **Load:** Used `TextLoader` to ingest the policy document.
+2. **Split:** Used `RecursiveCharacterTextSplitter` (chunk_size=200, overlap=30) to preserve context.
+3. **Embed:** Utilized HuggingFace's `all-mpnet-base-v2` to convert text into dense vectors.
+4. **Store:** Indexed the embeddings into LangChain's lightweight `InMemoryVectorStore`.
+5. **Retrieve:** Configured a `VectorStoreRetriever` to fetch the most semantically relevant chunk based on user queries.
+
+### 💻 Code Solution
+The complete Python script is available here: [semantic_search.py](./Assignment_4/semantic_search.py)
+
+### 📈 Execution Output (Proof of Work)
+**User Query:** *"What are the responsibilities of the Assistant Head of Department?"*
+
+**Retriever Output:**
+> **🎯 Top Semantic Match Found:**
+> 2. Governance and Compliance
+> All departments must adhere to the central risk register. The Assistant Head of Department is responsible for quarterly risk audits and ensuring that the Liferay CMS is updated with the latest compliance protocols.
+
 **Agent Response:**
 > **Final Synthesized Report – Power Outage Incident**
 > 
